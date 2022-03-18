@@ -1,5 +1,8 @@
 
-.app {display: flex;}
+.app {
+  display: flex;
+  justify-content: center;
+}
 
 .box{
   background: #e1e0de;
@@ -11,4 +14,9 @@
 
 .box p {
   margin: 5px;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
