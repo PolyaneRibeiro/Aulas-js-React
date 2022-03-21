@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box {
+  background: #e5e4e2;
+  padding: 30px;
+  margin: 30px;
+}
+
+.title {
+  margin-top: 30px;
+  font-weight: bold;
+}
