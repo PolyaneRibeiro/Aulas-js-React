@@ -4,16 +4,22 @@
   align-items: center;}
 
 .box{
-  background: #e1e0de;
+  background: black;
   margin: 20px;
-  width: 30%;
+  width: 10%;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  justify-content: space-around;
-  padding: 10px;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .text {
   font-size: 22px; 
   font-weight: bold; 
   cursor: pointer;}
+
+  label {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;;
+  }

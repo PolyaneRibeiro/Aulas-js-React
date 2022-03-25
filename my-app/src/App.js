@@ -9,9 +9,8 @@ function App() {
 
     <div className='app'>
       <form className='box'>
-        <label>Number:</label>
-        <input onChange={(e) => {alert(JSON.parse(e.target.value) + valor)}} />
-        <button>Enviar</button>        
+        <label>Calculando Valores:</label>
+        <input onChange={(e) => {alert(JSON.parse(e.target.value) + valor)}} />     
       </form>
       <div className='text' onClick={() => {alert(mensagem)}}>CLIQUE AQUI</div>
       
