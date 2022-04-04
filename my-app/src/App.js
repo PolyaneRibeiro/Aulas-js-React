@@ -37,10 +37,10 @@ function App() {
   return (
     <div className="app">
       {familia.map((item) => {
-        const filtrandoFamilia = item.gostaFazer.filter(membros => {
-          return membros.muito !== 'Futebol'
-        })
-          console.log(filtrandoFamilia, "filtrandoFamilia");
+        const filtrandoFamilia = item.gostaFazer.filter((membros) => {
+          return membros.muito !== "Futebol";
+        });
+        console.log(filtrandoFamilia, "filtrandoFamilia");
         return (
           <div className="box">
             <p>
@@ -53,13 +53,15 @@ function App() {
               <b>Nome da Mãe:</b> {item.nomeMae}
             </p>
             <br />
-            <p><b>Gosta de fazer</b></p>
-            {filtrandoFamilia.map(filter =>
-            <>
-            <p>{filter.muito}</p>
-            <p>{filter.pouco}</p>
-            </>
-            )}
+            <p>
+              <b>Gosta de fazer</b>
+            </p>
+            {filtrandoFamilia.map((filter) => (
+              <>
+                <p>{filter.muito}</p>
+                <p>{filter.pouco}</p>
+              </>
+            ))}
           </div>
         );
       })}
