@@ -13,7 +13,7 @@ export const msgConsoleIf = (valorDigitado) => {
     }
 }
 
-export const Click = (valorDigitado) => {
+export const msgConsoleSwitch = (valorDigitado) => {
     switch (valorDigitado) {
         case 'Lana': console.log('tem 11 messes'); break;
         case 'Poly': console.log('tem 33 anos'); break;

@@ -1,5 +1,5 @@
 import './App.css';
-import { msgConsoleIf, Click } from './utils'
+import { msgConsoleIf, msgConsoleSwitch } from './utils'
 
 function App() {
   
@@ -18,7 +18,7 @@ function App() {
       <h3>Exercício 2</h3>
       <p>Digite um nome</p>
       <form>        
-        <input onChange={(e) => { Click(e.target.value) }} />
+        <input onChange={(e) => { msgConsoleSwitch(e.target.value) }} />
       </form>
       </div>
 
