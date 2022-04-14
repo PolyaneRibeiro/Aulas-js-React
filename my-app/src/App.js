@@ -1,19 +1,29 @@
 import './App.css';
-import { MsgConsole, Click } from './utils'
+import { msgConsoleIf, Click } from './utils'
 
 function App() {
   
-  const nome = 'Felipe';
-  const cargo = 'chefe';
-
   return (
-    <div className='app'>
-      <from>
-        <input onChange={(e) => { MsgConsole(e.target.value) }} />
-        <button onClick={() => { Click(nome, cargo) }}>Enviar</button>
-      </from>
+  <>
+      <h1>Aula If Else e Switch Case</h1>
+      <div className='app'>
+      <div className='box'>
+      <h3>Exercício 1</h3>
+      <p>Digite um instrumento</p>
+      <form>        
+        <input onChange={(e) => { msgConsoleIf(e.target.value) }} />
+      </form>
+      </div>
+      <div className='box'>
+      <h3>Exercício 2</h3>
+      <p>Digite um nome</p>
+      <form>        
+        <input onChange={(e) => { Click(e.target.value) }} />
+      </form>
+      </div>
 
     </div>
+    </>
   );
 }
 
