@@ -5,7 +5,7 @@ body {
 
 h3{
   color: #252a2f;  
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   margin-top: 0;
 }
 
@@ -39,5 +39,19 @@ input:focus-visible {
   border:  2px dashed #ff8099  ;
   margin: 20px;
   padding: 30px;
+  justify-content: center;
+  width: 250px;
 
+}
+
+button {
+  background-color: #ff8099;
+  border: 0;
+  height: 24px;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 10px 0 10px;
+  margin-bottom: 10px;
 }
