@@ -39,7 +39,7 @@ const elemento = () => {
         case 'ar': return (
             <h3>Elemento: ar</h3>
         )
-        case 'água': return (
+        case 'agua': return (
             <h3>Elemento: água</h3>
         );
         case 'terra': return (
@@ -50,6 +50,17 @@ const elemento = () => {
         );
     }
 }
+
+const color = (splitElemento) => {
+    switch (splitElemento) {
+        case 'ar': return '#FFFAFA';
+        case 'agua': return '#add8e6';
+        case 'terra': return '#D3B8A5';
+        default: return '#FFF';
+    }
+}
+
+
 const personalidade = () => {
     switch (splitPersonalidade) {
         case 'calmo': return (
@@ -66,13 +77,14 @@ const personalidade = () => {
         );
     }
 }
-
+console.log(personalidade, 'personalidade')
+console.log(color, 'color')
 const Avatar = () => {
     return (
 
         <div className="content-avatar">       
             <h1>Avatar</h1>
-            <div className="box">
+            <div className="box-avatar" style={{background: color(splitElemento)}}>
             {personagem()}
             {elemento()}
             {personalidade()}

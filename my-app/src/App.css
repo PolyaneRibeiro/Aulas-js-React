@@ -54,6 +54,22 @@ input:focus-visible {
 
 }
 
+.box-avatar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px dashed;
+  margin: 20px;
+  padding: 30px;
+  justify-content: center;
+  width: 300px;  
+}
+
+.box-avatar img {
+  width: 300px;
+  margin-bottom: 15px;
+}
+
 a {
   background-color: #ff8099;
   border: 0;
@@ -63,4 +79,5 @@ a {
   cursor: pointer;
   padding: 5px 10px 5px 10px;
   margin-bottom: 10px;
+  text-decoration: none;
 }
