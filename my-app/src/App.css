@@ -4,7 +4,6 @@ body {
 }
 
 h3 {
-  color: #252a2f;
   margin-bottom: 0.8rem;
   margin-top: 0;
 }
@@ -24,11 +23,16 @@ p {
 }
 
 
-.content-avatar {
+.content {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+img {
+  width: 300px;
+  padding-top: 30px;
 }
 
 
@@ -44,15 +48,13 @@ input:focus-visible {
 
 .box {
   display: flex;
-  align-items: center;
   flex-direction: column;
   border: 2px dashed #ff8099;
   margin: 20px;
   padding: 30px;
-  justify-content: center;
-  width: 250px;
 
 }
+
 
 .box-avatar, .box-harry {
   display: flex;
@@ -95,4 +97,25 @@ a {
   padding: 5px 10px 5px 10px;
   margin-bottom: 10px;
   text-decoration: none;
+}
+
+
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+    cursor: pointer;
+}
+
+.box-radio {
+display: flex;
+align-items: center;
+}
+
+.banner {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
