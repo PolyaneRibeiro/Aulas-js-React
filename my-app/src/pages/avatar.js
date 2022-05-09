@@ -2,11 +2,11 @@ import React from "react";
 
 const url = window.location.href
 const splitUrl = url.split('&')
-const splitPersonagem = splitUrl[0].split('personagem=')[1]
-const splitElemento = splitUrl[1].split('elemento=')[1]
-const splitPersonalidade = splitUrl[2].split('personalidade=')[1]
+const splitPersonagem = splitUrl[0]?.split('personagem=')[1]
+const splitElemento = splitUrl[1]?.split('elemento=')[1]
+const splitPersonalidade = splitUrl[2]?.split('personalidade=')[1]
 
-console.log(splitPersonalidade, 'url')
+
 
 const personagem = () => {
     switch (splitPersonagem) {
@@ -22,32 +22,61 @@ const personagem = () => {
                 <img src='https://i.pinimg.com/550x/4a/e9/b9/4ae9b96df3b7b721512ad89113b318fb.jpg' />
             </>
         );
-        case 'zuko': return (
+        case 'toph': return (
             <>
-                <h3>Personagem: Zuco</h3>
-                <img src='https://i.pinimg.com/474x/a2/1b/bb/a21bbbd1a1903a4263c09473ccb131bb.jpg' />
+                <h3>Personagem: Toph</h3>
+                <img src='https://i.pinimg.com/originals/65/6f/ba/656fbad8835e21950681284e80076fb6.jpg' />
             </>
         );
-        default: (
+        default:  return (
             <h3>Personagem inválido</h3>
         );
     }
 }
 
-function Avatar() {
+const elemento = () => {
+    switch (splitElemento) {
+        case 'ar': return (
+            <h3>Elemento: ar</h3>
+        )
+        case 'água': return (
+            <h3>Elemento: água</h3>
+        );
+        case 'terra': return (
+            <h3>Elemento: terra</h3>
+        );
+        default: return (
+            <h3>Elemento inválido</h3>
+        );
+    }
+}
+const personalidade = () => {
+    switch (splitPersonalidade) {
+        case 'calmo': return (
+            <h3>Personalidade: calmo e sereno</h3>
+        );
+        case 'extrovertido': return (
+            <h3>Personalidade: extrovertida e alegre</h3>
+        );
+        case 'ranzinza': return (
+            <h3>Personalidade: Ranzinza</h3>
+        );
+        default:  return (
+            <h3>Personalidade inválida</h3>
+        );
+    }
+}
+
+const Avatar = () => {
     return (
-        <div className="">
+
+        <div className="content-avatar">       
             <h1>Avatar</h1>
+            <div className="box">
             {personagem()}
-            {splitElemento === 'ar' &&
-                <>
-                    <h3>Elemento: ar</h3>
-                </>
-            }
-            {splitElemento === 'ar' &&
-                <>
-                    <h3>Personalidade: calmo e sereno</h3>
-                </>}
+            {elemento()}
+            {personalidade()}
+        </div>
         </div>
     );
 }
