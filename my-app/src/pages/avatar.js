@@ -13,19 +13,19 @@ const personagem = () => {
         case 'aang': return (
             <>
                 <h3>Personagem: Aang</h3>
-                <img src='http://pm1.narvii.com/6512/dfe52ce02be01bf26fcfff3c82657b635b88ff83_00.jpg' />
+                <img alt='aang' src='http://pm1.narvii.com/6512/dfe52ce02be01bf26fcfff3c82657b635b88ff83_00.jpg' />
             </>
         );
         case 'katara': return (
             <>
                 <h3>Personagem: Katara</h3>
-                <img src='https://i.pinimg.com/550x/4a/e9/b9/4ae9b96df3b7b721512ad89113b318fb.jpg' />
+                <img alt='katara' src='https://i.pinimg.com/550x/4a/e9/b9/4ae9b96df3b7b721512ad89113b318fb.jpg' />
             </>
         );
         case 'toph': return (
             <>
                 <h3>Personagem: Toph</h3>
-                <img src='https://i.pinimg.com/originals/65/6f/ba/656fbad8835e21950681284e80076fb6.jpg' />
+                <img alt='toph' src='https://i.pinimg.com/originals/65/6f/ba/656fbad8835e21950681284e80076fb6.jpg' />
             </>
         );
         default:  return (
@@ -77,8 +77,7 @@ const personalidade = () => {
         );
     }
 }
-console.log(personalidade, 'personalidade')
-console.log(color, 'color')
+
 const Avatar = () => {
     return (
 
