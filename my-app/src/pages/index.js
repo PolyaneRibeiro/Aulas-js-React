@@ -1,90 +1,29 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import axios from 'axios'
 
 function Home() {
-  const [loja, setLoja] = useState()
-  const [cor, setCor] = useState()
-  const [comodo, setComodo] = useState()
-  const [fornecedor, setFornecedor] = useState()
+  const [series, setSeries] = useState()
+
+  useEffect(() => {
+    axios.get('https://streaming-d95a2-default-rtdb.firebaseio.com/series.json')
+      .then((response) => setSeries(response.data))
+  }, []);
 
   return (
-    <>
+    <div className="content">
+      <h1>Aula de Get</h1>
       <div className="app">
-        <div className="box">
-          <h1>Loja</h1>
-          <div className="box-radio">
-            <input type="radio" name="loja" onClick={() => setLoja('riachuelo')} />
-            <label>Riachuelo</label>
-          </div>
-
-          <div className="box-radio">
-            <input type="radio" name="loja" onClick={() => setLoja('americanas')} />
-            <label>Americanas</label>
-          </div>
-
-          <div className="box-radio">
-            <input type="radio" name="loja" onClick={() => setLoja('magazine')} />
-            <label>Magazine Luiza</label>
-          </div>
-        </div>
-        <div className="box">
-          <h1>Cor</h1>
-          <div className="box-radio">
-            <input type="radio" name="cor" onClick={() => setCor('azul')} />
-            <label>Azul</label>
-          </div>
-
-          <div className="box-radio">
-            <input type="radio" name="cor" onClick={() => setCor('amarelo')} />
-            <label>Amarelo</label>
-          </div>
-
-          <div className="box-radio">
-            <input type="radio" name="cor" onClick={() => setCor('vermelho')} />
-            <label>Vermelho</label>
-          </div>
-        </div>
-
-        <div className="box">
-          <h1>Comodo</h1>
-          <div className="box-radio">
-            <input type="radio" name="comodo" onClick={() => setComodo('cozinha')} />
-            <label>Cozinha</label>
-          </div>
-
-          <div className="box-radio">
-            <input type="radio" name="comodo" onClick={() => setComodo('sala')} />
-            <label>Sala</label>
-          </div>
-
-          <div className="box-radio">
-            <input type="radio" name="comodo" onClick={() => setComodo('quarto')} />
-            <label>Quarto</label>
-          </div>
-        </div>
-        <div className="box">
-          <h1>Fornecedor</h1>
-          <div className="box-radio">
-            <input type="radio" name="fornecedor" onClick={() => setFornecedor('madeira')} />
-            <label>Madeira madeira</label>
-          </div>
-
-          <div className="box-radio">
-            <input type="radio" name="fornecedor" onClick={() => setFornecedor('bonato')} />
-            <label>Bonato</label>
-          </div>
-
-          <div className="box-radio">
-            <input type="radio" name="fornecedor" onClick={() => setFornecedor('philco')} />
-            <label>Philco</label>
-          </div>
-        </div>
-
+        {series && Object.values(series).map(item => {
+          return (
+            <div className="box">
+              <h3>Titulo: {item.titulo}</h3>
+              <p>Gênero: {item.genero}</p>
+              <p>Temporadas: {item.temporadas}</p>
+            </div>
+          )
+        })}
       </div>
-      <div className="app">
-        <a href={`/loja?loja=${loja}&cor=${cor}&comodo=${comodo}&fornecedor=${fornecedor}`}>Buscar</a>
-      </div>
-    </>
+    </div>
   );
 }
 
