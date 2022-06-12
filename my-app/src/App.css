@@ -58,42 +58,10 @@ input:focus-visible {
   border: 2px dashed #ff8099;
   margin: 20px;
   padding: 30px;
-
+  width: 250px;
+  text-align: center;
 }
 
-
-.box-avatar,
-.box-harry {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border: 2px dashed;
-  margin: 20px;
-  padding: 30px;
-  justify-content: center;
-  width: 300px;
-}
-
-.box-harry {
-  background-color: white;
-}
-
-.box-avatar img,
-.box-harry img {
-  width: 300px;
-  margin-bottom: 15px;
-}
-
-.box-casa {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-}
-
-.box-casa img {
-  width: 50px;
-  margin-right: 10px;
-}
 
 a {
   background-color: #ff8099;
