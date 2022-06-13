@@ -1,30 +1,57 @@
 import React, { useState } from "react";
 
+// const dados = [
+//   {
+//     login: 'felipe@fpr.com.br',
+//     senha: 'celula08',
+//   },
+//   {
+//     login: 'douglas@fpr.com.br',
+//     senha: 'celula08',
+//   },
+//   {
+//     login: 'nathan@fpr.com.br',
+//     senha: 'celula08',
+//   },
+//   {
+//     login: 'emanuel@fpr.com.br',
+//     senha: 'celula08',
+//   },
+//   {
+//     login: 'poly@fpr.com.br',
+//     senha: 'celula08',
+//   },
+//   {
+//     login: 'gelinho@fpr.com.br',
+//     senha: 'celula08',
+//   },
+//   {
+//     login: 'marcelo@fpr.com.br',
+//     senha: 'celula08',
+//   },
+//   {
+//     login: 'mauricio@fpr.com.br',
+//     senha: 'celula08',
+//   },
+// ]
+
 function Home() {
-  const [valor, setValor] = useState()
+  const [usuario, setUsuario] = useState()
+  const [senha, setSenha] = useState()
 
-  const enviarLocal = () => {
-    localStorage.setItem('nome', 'Poly')
-    window.location.href = '/local'
-  }
-
-  const enviarSession = () => {
-    const multiplicacao = valor * 10
-    sessionStorage.setItem('valor', multiplicacao)
-    window.location.href = '/session'
+  const enviar = () => {
+    localStorage.setItem('usuario', usuario)
+    localStorage.setItem('senha', senha)
+    window.location.href = '/autenticacao'
   }
 
   return (
     <div className="app">
       <div className="box">
-        <h2>localStorage</h2>
-        <button onClick={() => enviarLocal()}>Clique aqui</button>
-      </div>
-      <div className="box">
-        <h2>sessionStorage</h2>
-        <p>Digite um número para ser multiplicado por 10</p>
-        <input onChange={(e) => setValor(e.target.value)} />
-        <button onClick={() => enviarSession()}>Veja o resultado</button>
+        <h2>Login</h2>
+        <label>Usuário</label><input onChange={(e) => setUsuario(e.target.value)} />
+        <label>Senha</label><input type='password' onChange={(e) => setSenha(e.target.value)} />
+        <button onClick={() => enviar()}>Entrar</button>
       </div>
     </div>
 

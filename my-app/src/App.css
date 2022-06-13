@@ -62,6 +62,11 @@ input:focus-visible {
   text-align: center;
 }
 
+img {
+  width: 200px;
+  ;
+}
+
 
 a {
   background-color: #ff8099;
